@@ -1,0 +1,9 @@
+<%= f.label Spree.t("categories_content.name") %> <span class="required">*</span><br />
+<%= f.text_field :name, :class => 'fullwidth title' %>
+<%= f.error_message_on :name %>
+<div id="art">
+  <%= f.fields_for :spree_articles do |builder| %>
+      <%= render 'spree_article_fields', :f => builder %>
+  <% end %>
+</div>
+<p><%= link_to_add_fields2(Spree.t('articles_content.add_article'), f, :spree_articles) %></p>

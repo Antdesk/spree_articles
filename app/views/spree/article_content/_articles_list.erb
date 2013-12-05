@@ -1,0 +1,19 @@
+<table class="index">
+  <colgroup>
+    <col style="width: 40%" />
+    <col style="width: 40%" />
+    <col style="width: 10%" />
+    <col style="width: 10%" />
+  </colgroup>
+  <thead>
+  <tr>
+    <th><%= Spree::Article.human_attribute_name(:title) %></th>
+    <th><%= Spree::Article.human_attribute_name(:visible) %></th>
+    <th class="actions"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render :partial => "spree/article_content/article", :collection => Spree::Article.where(:category_id == :id), :as => :article %>
+  </tbody>
+</table>

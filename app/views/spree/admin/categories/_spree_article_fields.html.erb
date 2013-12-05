@@ -1,0 +1,14 @@
+<div class="fields">
+  <div class="alpha ten columns">
+<%= f.label Spree.t("articles_content.title") %> <span class="required">*</span>
+<%= link_to_remove_fields Spree.t("articles_content.remove_article"), f %><br />
+<%= f.text_field :title, :class => 'fullwidth title' %>
+
+<%= f.label Spree.t("articles_content.content") %><span class="required">*</span><br />
+<%= f.text_area :content, {:class => 'fullwidth'} %>
+  </div>
+<ul id="static_page_options">
+    <%= f.label Spree.t("articles_content.visible") %>
+    <%= f.check_box :visible %>
+</ul>
+</div>

@@ -1,0 +1,2 @@
+<% page_uri = Rails.application.routes.named_routes[:spree].path.spec.to_s == '/' ? category.slug : Rails.application.routes.named_routes[:spree].path.spec.to_s + category.slug %>
+<div class="menu_item <%=(request.fullpath.gsub('//','/') == page_uri) ? 'current' : 'not'%>"><%= link_to category.name, page_uri  %></div>

@@ -1,0 +1,16 @@
+<% content_for :page_title do %>
+    <%= Spree.t("categories_content.categories") %> <i class="icon-arrow-right"></i> <%= Spree.t("categories_content.new_category") %>
+<% end %>
+
+<% content_for :page_actions do %>
+    <li><%= button_link_to Spree.t(:back_to_categories_list), spree.admin_categories_url, :icon => 'icon-arrow-left' %></li>
+<% end %>
+
+<%= render "spree/shared/error_messages", :target => @category %>
+<%= javascript_include_tag('ckeditor/init') %>
+
+<%= form_for [:admin, @category] do |f| %>
+    <%= render 'form', :f => f %>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+
+<% end %>

@@ -1,0 +1,40 @@
+<% content_for :page_actions do %>
+    <li><%= button_link_to Spree.t("categories_content.new_category"), new_object_url, :icon => 'icon-plus' %></li>
+<% end %>
+
+<% content_for :page_title do %>
+    <%= Spree.t("categories_content.categories") %>
+<% end %>
+
+<table class="index">
+  <colgroup>
+    <col style="width: 40%" />
+    <col style="width: 40%" />
+    <col style="width: 10%" />
+    <col style="width: 10%" />
+  </colgroup>
+  <thead>
+  <tr>
+    <th><%= Spree::Category.human_attribute_name(:name) %></th>
+    <th><%= Spree.t("categories_content.link") %></th>
+    <th class="actions"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @categories.each do |category| %>
+      <tr class="<%= cycle('odd', 'even') %>" id="<%= dom_id category %>">
+        <td>
+          <%= category.name %>
+        </td>
+        <td>
+          <%= link_to category.link, "/"+category.link, :target => '_blank' %>
+        </td>
+        <td  class="actions">
+          <%= link_to_edit category, :no_text => true %>
+          <%= link_to_delete category, :no_text => true %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

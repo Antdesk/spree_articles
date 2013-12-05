@@ -1,0 +1,52 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+---
+pl:
+  spree:
+    activerecord:
+      attributes:
+        spree/category: &category_labels
+          name: Nazwa
+          slug: Skrót
+        spree/article: &article_labels
+          content: Treść
+          title: Tytuł
+          visible: Widoczna
+      models:
+        category:
+          one: Kategoria
+          many: Kategorie
+        article:
+          one: Artykuł
+          many: Artykuły
+    back_to_categories_list: Powrót do listy
+    category: Kategoria
+    categories: Kategorie
+    article: Artykuł
+    articles: Artykuły
+    articles_content:
+      articles: Artykuły
+      articles_desc: Zarządzaj artykułami
+      new_article: Nowy artykuł
+      editing_article: Edytuj artykuł
+      confirm_delete: Jesteś pewien ?
+      link: Odnośnik
+      page_navigation_title: "Artykuły"
+      content: Treść
+      title: Tytuł
+      visible: Widoczna
+      remove_article: Usuń Artykuł
+      add_article: Dodaj Artykuł
+    categories_content:
+      categories: Kategorie
+      categories_desc: Zarządzaj kategoriami
+      new_category: Nowa kategoria
+      editing_category: Edytuj kategorie
+      confirm_delete: Jesteś pewien ?
+      link: Odnośnik
+      category_navigation_title: "Kategorie"
+      name: Nazwa
+      slug: Skrót
+
+
