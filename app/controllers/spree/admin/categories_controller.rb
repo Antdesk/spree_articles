@@ -20,6 +20,10 @@ class Spree::Admin::CategoriesController < Spree::Admin::ResourceController
     end
   end
 
+  def index
+    @categories = Spree::Category.all
+  end
+
   private
 
     def determine_layout
