@@ -20,7 +20,6 @@
     <th class="actions"></th>
   </tr>
   </thead>
-  <% if !@categories.nil? %>
       <tbody>
       <% @categories.each do |category| %>
           <tr class="<%= cycle('odd', 'even') %>" id="<%= dom_id category %>">
@@ -37,5 +36,4 @@
           </tr>
       <% end %>
       </tbody>
-  <% end %>
 </table>
