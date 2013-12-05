@@ -29,7 +29,7 @@ class Spree::Category < ActiveRecord::Base
 
   def link
     if slug.nil?
-      return '' and return
+      return ''
     end
     slug
   end

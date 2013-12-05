@@ -20,11 +20,6 @@ class Spree::Admin::CategoriesController < Spree::Admin::ResourceController
     end
   end
 
-  def index
-    @categories = Spree::Category.all
-    render :json => @categories and return
-  end
-
   private
 
     def determine_layout
