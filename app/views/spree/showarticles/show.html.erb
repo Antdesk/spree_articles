@@ -1,18 +1,19 @@
 <div class="block">
   <div class="product_title"><div style="margin-left: 15px;">
-        TYTUŁ TEST
-  </div></div>
-  <div class="product_block_cart">
+        Media
+  </div>
+</div>
+ <!-- <div class="product_block_cart">
     <div class="product_cart" id="link-to-cart" data-hook><%= link_to_cart %></div>
     <div class="product_cart_img"></div>
-  </div>
+  </div> -->
 </div>
 <br><br>
 <% content_for :head do -%>
     <meta name="title" content="<%= @a.title %>">
 <% end -%>
 <div class="block">
-  <div class="faq_block_q">asdasads<%= @a.title %></div>
+  <div class="faq_block_q"><%= @a.title %></div>
   <div class="faq_block_a"><%= raw @a.content %>
   </div>
 </div>
