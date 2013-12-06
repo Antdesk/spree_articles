@@ -4,7 +4,7 @@ class Spree::Category < ActiveRecord::Base
   accepts_nested_attributes_for :spree_articles, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   default_scope :order => 'created_at ASC'
 
-  validates_presence_of :name
+  validates_presence_of :name, :slug
 
   attr_accessible :name, :slug , :spree_articles_attributes
 
