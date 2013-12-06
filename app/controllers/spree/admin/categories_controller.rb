@@ -1,7 +1,7 @@
 class Spree::Admin::CategoriesController < Spree::Admin::ResourceController
   class Category < ActiveRecord::Base
   end
-  after_filter :slug, :only => [:create, :update]
+  #after_filter :slug, :only => [:create, :update]
   layout :determine_layout
 
 
