@@ -6,12 +6,14 @@ class Spree::ShowarticlesController < Spree::StoreController
   def show
     id = params[:id]
     @a = Spree::Article.by_id(id).first
-    @b = @a.spree_category_id
-    c = { :a => @a, :b => @b }
-    render :json => c and return
-    unless @a = Spree::Article.by_id(id).first
-      render_404
+    @b = Spree::Category.find(@a.spree_category_id).name
+    @c = { :a => @a, :b => @b }
+    if !(@a.nil? and @b.nil?)
+      @c
     end
+    #unless @a = Spree::Article.by_id(id).first
+    #  render_404
+    #end
 
   end
 
