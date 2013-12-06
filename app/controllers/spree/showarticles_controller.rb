@@ -5,7 +5,10 @@ class Spree::ShowarticlesController < Spree::StoreController
 
   def show
     id = params[:id]
-    render :json => params and return
+    @a = Spree::Article.by_id(id).first
+    @b = @a.spree_category_id
+    c = { :a => @a, :b => @b }
+    render :json => c and return
     unless @a = Spree::Article.by_id(id).first
       render_404
     end
