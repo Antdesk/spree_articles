@@ -12,6 +12,9 @@
   <%= f.label :name %> <span class="required">*</span><br />
   <%= f.text_field :name, :class => 'fullwidth title' %>
   <%= f.error_message_on :name %>
+  <%= f.label Spree.t("articles_content.link") %> <span class="required">*</span> <br />
+  <%= f.text_field :slug, :class => 'fullwidth title' %>
+  <%= f.error_message_on :slug %>
   <div id="art">
     <%= f.fields_for :spree_articles do |builder| %>
         <%= render 'spree_article_fields', :f => builder %>
