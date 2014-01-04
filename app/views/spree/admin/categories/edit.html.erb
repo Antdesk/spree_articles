@@ -20,7 +20,7 @@
         <%= render 'spree_article_fields', :f => builder %>
     <% end %>
   </div>
-  <p><%= link_to_add_fields2('Add Article', f, :spree_articles) %></p>
+  <p><%= link_to_add_fields2(Spree.t('articles_content.add_article'), f, :spree_articles) %></p>
 
   <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
 <% end %>
