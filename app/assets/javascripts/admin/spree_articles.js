@@ -26,7 +26,6 @@ function add_fields(link, association, content) {
 
 }
 $(document).ready(function(){
-    alert('przed');
     var ele = new Array();
     $("#art textarea[id^='category_spree_articles_attributes']").each(function(index) {
         $(this).attr('id', 'category_spree_articles_attributes_' + index);
@@ -36,6 +35,5 @@ $(document).ready(function(){
             CKEDITOR.replace(test);
         }
     });
-    alert('po');
 
 });
